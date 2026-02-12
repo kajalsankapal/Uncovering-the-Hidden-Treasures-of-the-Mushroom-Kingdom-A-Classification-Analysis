@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Mushrooms - Smartbridge</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,300;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Smartbridge</div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home_page') }}" class="nav-link">Home</a></li>
+                <li><a href="{{ url_for('about_page') }}" class="nav-link active">About</a></li>
+                <li><a href="{{ url_for('images_page') }}" class="nav-link">Images</a></li>
+                <li><a href="{{ url_for('predict_page') }}" class="nav-link">Predict</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section with Background Image -->
+    <section class="about-section" style="background-image: url('/static/css/mushroom-bg.jpg');">
+        <div class="about-overlay"></div>
+        <div class="about-content">
+            <h1>Mushrooms</h1>
+            <div class="about-divider"></div>
+            <p class="about-text">
+                A mushroom or toadstool is the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground, on soil, or on its food source. Toadstool generally denotes one poisonous to humans.
+            </p>
+            <a href="{{ url_for('images_page') }}" class="about-btn">SOME MUSHROOM IMAGES</a>
+        </div>
+    </section>
+
+    <!-- Mushroom Classifications Info -->
+    <section class="classifications-section">
+        <div class="classifications-container">
+            <h2>Mushroom Categories</h2>
+            <div class="classifications-grid">
+                <div class="classification-card">
+                    <h3>Boletus</h3>
+                    <p>A genus of fungi that includes some of the most prized culinary mushrooms. They are known for their distinctive appearance and rich flavor.</p>
+                </div>
+                <div class="classification-card">
+                    <h3>Lactarius</h3>
+                    <p>Also known as milkcap mushrooms, these fungi produce a milky latex when cut or broken. They are found in various woodland habitats.</p>
+                </div>
+                <div class="classification-card">
+                    <h3>Russula</h3>
+                    <p>A large and diverse genus of mushrooms. Some species are edible while others are toxic, making proper identification crucial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
